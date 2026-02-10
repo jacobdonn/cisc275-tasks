@@ -1,5 +1,10 @@
 import React from "react";
 import "./App.css";
+import budgies from "./images/budgies.jpg";
+
+export function Header(): React.JSX.Element {
+    return <h1>This is my header</h1>;
+}
 
 function App(): React.JSX.Element {
     return (
@@ -12,6 +17,8 @@ function App(): React.JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <h1>This is a header!</h1>
+            <img src={budgies} alt="A budgie couple" />
         </div>
     );
 }
