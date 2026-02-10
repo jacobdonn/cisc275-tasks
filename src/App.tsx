@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import budgies from "./images/budgies.jpg";
+import { Button } from "react-bootstrap";
 
 export function Header(): React.JSX.Element {
     return <h1>This is my header</h1>;
@@ -19,9 +20,7 @@ function App(): React.JSX.Element {
             </p>
 
             <h1>This is a header!</h1>
-
             <img src={budgies} alt="A budgie couple" />
-
             <div className="List">
                 My go-to Dominos order:
                 <ul>
@@ -29,6 +28,15 @@ function App(): React.JSX.Element {
                     <li>Sausage</li>
                     <li>Green peppers</li>
                 </ul>
+            </div>
+            <div className="Button">
+                <Button
+                    onClick={() => {
+                        console.log("Hello World!");
+                    }}
+                >
+                    Log Hello World
+                </Button>
             </div>
         </div>
     );
