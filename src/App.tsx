@@ -17,8 +17,19 @@ function App(): React.JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+
             <h1>This is a header!</h1>
+
             <img src={budgies} alt="A budgie couple" />
+
+            <div className="List">
+                My go-to Dominos order:
+                <ul>
+                    <li>Pepperoni</li>
+                    <li>Sausage</li>
+                    <li>Green peppers</li>
+                </ul>
+            </div>
         </div>
     );
 }
