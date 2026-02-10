@@ -10,7 +10,7 @@ export function Header(): React.JSX.Element {
 function App(): React.JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">
+            <header className="App-header" style={{ backgroundColor: "red" }}>
                 UD CISC275 with React Hooks and TypeScript. Jacob Donn. Hello
                 World
             </header>
