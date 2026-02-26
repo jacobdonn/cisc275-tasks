@@ -164,7 +164,14 @@ export function renameQuestionById(
     targetId: number,
     newName: string,
 ): Question[] {
-    return [];
+    const targetIndex: number = questions.findIndex(
+        (question: Question): boolean => question.id === targetId,
+    );
+    const questionsCopy: Question[] = questions.map(
+        (question: Question): Question => ({ ...question }),
+    );
+    questionsCopy[targetIndex].name = newName;
+    return questionsCopy;
 }
 
 /***
