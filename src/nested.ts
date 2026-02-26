@@ -186,7 +186,18 @@ export function changeQuestionTypeById(
     targetId: number,
     newQuestionType: QuestionType,
 ): Question[] {
-    return [];
+    const targetIndex: number = questions.findIndex(
+        (question: Question): boolean => question.id === targetId,
+    );
+    const questionsCopy: Question[] = questions.map(
+        (question: Question): Question => ({ ...question }),
+    );
+    questionsCopy[targetIndex].options =
+        newQuestionType === "short_answer_question" ?
+            []
+        :   questionsCopy[targetIndex].options;
+    questionsCopy[targetIndex].type = newQuestionType;
+    return questionsCopy;
 }
 
 /**
