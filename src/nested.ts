@@ -100,7 +100,14 @@ id,name,options,points,published
  * Check the unit tests for more examples!
  */
 export function toCSV(questions: Question[]): string {
-    const finalStr: string = "id,name,options,points,published\n";
+    const top: string = "id,name,options,points,published\n";
+    const data: string[] = questions.map(
+        (question: Question): string =>
+            `${question.id},${question.name},${question.options.length},${question.points},${question.published}\n`,
+    );
+
+    const final: string[] = [top, ...data];
+    return final.join("").slice(0, -1);
 }
 
 /**
@@ -219,17 +226,6 @@ export function editOption(
     const targetQuestion = questions.find(
         (question: Question): boolean => question.id === targetId,
     );
-
-    // if (targetOptionIndex === -1) {
-    //     targetQuestion!.options = [...targetQuestion!.options, newOption];
-    // } else {
-    //     targetQuestion!.options.splice(targetOptionIndex, 1, newOption);
-    // }
-
-    // return questions.map(
-    //     (question: Question): Question =>
-    //         question.id === targetId ? targetQuestion! : question,
-    // );
 
     let targetQuestionOptions: string[] = [];
     if (targetOptionIndex === -1) {
