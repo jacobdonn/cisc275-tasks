@@ -219,6 +219,34 @@ export function editOption(
     const targetQuestion = questions.find(
         (question: Question): boolean => question.id === targetId,
     );
+
+    // if (targetOptionIndex === -1) {
+    //     targetQuestion!.options = [...targetQuestion!.options, newOption];
+    // } else {
+    //     targetQuestion!.options.splice(targetOptionIndex, 1, newOption);
+    // }
+
+    // return questions.map(
+    //     (question: Question): Question =>
+    //         question.id === targetId ? targetQuestion! : question,
+    // );
+
+    let targetQuestionOptions: string[] = [];
+    if (targetOptionIndex === -1) {
+        targetQuestionOptions = [...targetQuestion!.options, newOption];
+    } else {
+        targetQuestionOptions = [...targetQuestion!.options];
+        targetQuestionOptions.splice(targetOptionIndex, 1, newOption);
+    }
+
+    const newOptionQuestion: Question = {
+        ...targetQuestion!,
+        options: targetQuestionOptions,
+    };
+    return questions.map(
+        (question: Question): Question =>
+            question.id === targetId ? newOptionQuestion : question,
+    );
 }
 
 /***
@@ -242,6 +270,7 @@ export function duplicateQuestionInArray(
     const origQuestionIndex: number = questions.findIndex(
         (question: Question): boolean => question.id === targetId,
     );
+
     const newArr = [...questions];
     newArr.splice(origQuestionIndex + 1, 0, duplicatequestion);
     return newArr;
