@@ -1,7 +1,11 @@
 import React from "react";
 import "./App.css";
-import budgies from "./images/budgies.jpg";
-import { Button } from "react-bootstrap";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 export function Header(): React.JSX.Element {
     return <h1>This is my header</h1>;
@@ -14,30 +18,18 @@ function App(): React.JSX.Element {
                 UD CISC275 with React Hooks and TypeScript. Jacob Donn. Hello
                 World
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-
-            <h1>This is a header!</h1>
-            <img src={budgies} alt="A budgie couple" />
-            <div className="List">
-                My go-to Dominos order:
-                <ul>
-                    <li>Pepperoni</li>
-                    <li>Sausage</li>
-                    <li>Green peppers</li>
-                </ul>
-            </div>
-            <div className="Button">
-                <Button
-                    onClick={() => {
-                        console.log("Hello World!");
-                    }}
-                >
-                    Log Hello World
-                </Button>
-            </div>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday>
         </div>
     );
 }
