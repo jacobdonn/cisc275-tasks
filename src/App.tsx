@@ -11,10 +11,10 @@ import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
 import { CheckAnswer } from "./form-components/CheckAnswer";
-import { GiveAttempts } from "./form-components/GiveAttempts";
-import { EditMode } from "./form-components/EditMode";
-import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
-import { ChangeColor } from "./form-components/ChangeColor";
+// import { GiveAttempts } from "./form-components/GiveAttempts";
+// import { EditMode } from "./form-components/EditMode";
+// import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+// import { ChangeColor } from "./form-components/ChangeColor";
 
 export function Header(): React.JSX.Element {
     return <h1>This is my header</h1>;
@@ -28,12 +28,9 @@ function App(): React.JSX.Element {
                 World
             </header>
             <hr></hr>
-<<<<<<< HEAD
-            <DoubleHalf></DoubleHalf>
-=======
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
-            <GiveAttempts></GiveAttempts>
+            {/* <GiveAttempts></GiveAttempts>
             <hr></hr>
             <EditMode></EditMode>
             <hr></hr>
@@ -42,10 +39,9 @@ function App(): React.JSX.Element {
             <MultipleChoiceQuestion
                 options={["a", "b", "c"]}
                 expectedAnswer="b"
-            ></MultipleChoiceQuestion>
+            ></MultipleChoiceQuestion> */}
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
->>>>>>> upstream/task-forms
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
