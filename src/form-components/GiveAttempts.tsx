@@ -37,7 +37,8 @@ export function GiveAttempts(): React.JSX.Element {
             >
                 gain
             </Button>
-            {attsLeft}
+            {/* <span data-testId="attsLeft">{attsLeft}</span> */}
+            <p>Attempts left: {attsLeft}</p>
         </div>
     );
 }
