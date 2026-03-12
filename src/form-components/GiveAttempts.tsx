@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 
 export function GiveAttempts(): React.JSX.Element {
     const [attsLeft, setAttsLeft] = useState<number>(3);
-    const [attsRequested, setAttsRequested] = useState<string>("3");
+    const [attsRequested, setAttsRequested] = useState<string>("");
 
     function updateAttsRequested(event: React.ChangeEvent<HTMLInputElement>) {
         setAttsRequested(event.target.value);
@@ -37,7 +37,6 @@ export function GiveAttempts(): React.JSX.Element {
             >
                 gain
             </Button>
-            {/* <span data-testId="attsLeft">{attsLeft}</span> */}
             <p>Attempts left: {attsLeft}</p>
         </div>
     );

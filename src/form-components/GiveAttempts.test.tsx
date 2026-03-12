@@ -49,7 +49,6 @@ describe("GiveAttempts Component tests", () => {
             gain.click();
         });
         expect(screen.getByText(/113/i)).toBeInTheDocument();
-        //expect(screen.getByTestId("attsLeft"))
     });
     test("(2 pts) Cannot gain blank amounts", async () => {
         const gain = screen.getByRole("button", { name: /gain/i });
