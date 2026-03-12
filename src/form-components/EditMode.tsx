@@ -32,6 +32,7 @@ export function EditMode(): React.JSX.Element {
                 <Form.Check
                     type="checkbox"
                     label="Toggle student status"
+                    id="student"
                     checked={isStudent}
                     onChange={updateIsStudent}
                 />
