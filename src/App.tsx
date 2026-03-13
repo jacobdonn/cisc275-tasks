@@ -14,7 +14,7 @@ import { CheckAnswer } from "./form-components/CheckAnswer";
 import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
 // import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
-// import { ChangeColor } from "./form-components/ChangeColor";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 export function Header(): React.JSX.Element {
     return <h1>This is my header</h1>;
@@ -34,9 +34,9 @@ function App(): React.JSX.Element {
             <hr></hr>
             <EditMode></EditMode>
             <hr></hr>
-            {/* <ChangeColor></ChangeColor>
+            <ChangeColor></ChangeColor>
             <hr></hr>
-            <MultipleChoiceQuestion
+            {/* <MultipleChoiceQuestion
                 options={["a", "b", "c"]}
                 expectedAnswer="b"
             ></MultipleChoiceQuestion>
